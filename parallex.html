@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100vh;
+        background-color: #222;
+        }
+        #image{
+            margin-left: 500px;
+            margin-top: 200px;
+            height: 200px;
+            width: 200px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <img src="C:\Users\Dell\Downloads\—Pngtree—illustration of baby krishna eating_15868769.png" alt="" id="image">
+</body>
+<script>
+
+    let image=document.getElementById('image');
+    document.addEventListener('mousemove',function(r)
+{
+    let x=r.clientX;
+    let y=r.clientY;
+
+    let offsetX=(x/window.innerWidth-0.5)*50;
+    
+    let offsetY=(y/window.innerWidth-0.5)*50;
+
+    image.style.transform="translate("+offsetX+"px,"+offsetY+"px)";
+
+
+});
+
+</script>
+</html>
